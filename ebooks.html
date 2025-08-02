@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-books | Digital Marketing & Accounting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #f0f0f0;
+      margin: 0; padding: 0;
+    }
+    header, footer {
+      background: #222;
+      padding: 15px 20px;
+      color: #bbb;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: orange;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0; padding: 0;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: orange;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      color: orange;
+      margin-bottom: 20px;
+    }
+    .ebook {
+      background: #222;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #333;
+    }
+    .ebook-title {
+      font-size: 1.3em;
+      color: #ffa500;
+      margin: 0 0 8px 0;
+    }
+    .ebook-desc {
+      font-size: 0.95em;
+      line-height: 1.4;
+      color: #ddd;
+      margin: 0 0 10px 0;
+    }
+    .price {
+      font-weight: bold;
+      color: #ffb84d;
+      margin-bottom: 10px;
+    }
+    .buy-btn {
+      background: orange;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+    .buy-btn:hover {
+      background: #e67300;
+      color: white;
+    }
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+      padding: 10px 0;
+      border-radius: 6px;
+      z-index: 1;
+      top: 45px;
+      left: 0;
+    }
+    .dropdown-content a {
+      color: #f0f0f0;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+      font-weight: 600;
+    }
+    .dropdown-content a:hover {
+      background-color: orange;
+      color: black;
+    }
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+    footer a {
+      color: orange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Digital Marketing & Accounting</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="formation.html">Formations</a></li>
+        <li><a href="ebooks.html">E-books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="apropos.html">À Propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nos E-books</h1>
+
+    <div class="ebook">
+      <h2 class="ebook-title">Formation Excel pratique</h2>
+      <p class="ebook-desc">Un guide 100% pratique pour maîtriser Excel rapidement.</p>
+      <div class="price">Prix : 10 000 FCFA (~ $18 USD)</div>
+      <div class="dropdown">
+        <button class="buy-btn" onclick="toggleDropdown(this)">Acheter maintenant</button>
+        <div class="dropdown-content">
+          <a href="https://example.com/mobilemoney/excel" target="_blank">Mobile Money (FCFA)</a>
+          <a href="https://example.com/mastercard/excel" target="_blank">Mastercard (USD)</a>
+          <a href="https://example.com/visa/excel" target="_blank">Visa (USD)</a>
+          <a href="https://example.com/paypal/excel" target="_blank">Paypal (International)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ebook">
+      <h2 class="ebook-title">Sage gestion commerciale pratique</h2>
+      <p class="ebook-desc">Apprenez à gérer votre comptabilité avec Sage, pratique et facile.</p>
+      <div class="price">Prix : 10 000 FCFA (~ $18 USD)</div>
+      <div class="dropdown">
+        <button class="buy-btn" onclick="toggleDropdown(this)">Acheter maintenant</button>
+        <div class="dropdown-content">
+          <a href="https://example.com/mobilemoney/sage" target="_blank">Mobile Money (FCFA)</a>
+          <a href="https://example.com/mastercard/sage" target="_blank">Mastercard (USD)</a>
+          <a href="https://example.com/visa/sage" target="_blank">Visa (USD)</a>
+          <a href="https://example.com/paypal/sage" target="_blank">Paypal (International)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ebook">
+      <h2 class="ebook-title">Marketing digital : création compte pro, TikTok & pub</h2>
+      <p class="ebook-desc">Guide complet pour réussir votre marketing digital sur les réseaux sociaux.</p>
+      <div class="price">Prix : 10 000 FCFA (~ $18 USD)</div>
+      <div class="dropdown">
+        <button class="buy-btn" onclick="toggleDropdown(this)">Acheter maintenant</button>
+        <div class="dropdown-content">
+          <a href="https://example.com/mobilemoney/marketing" target="_blank">Mobile Money (FCFA)</a>
+          <a href="https://example.com/mastercard/marketing" target="_blank">Mastercard (USD)</a>
+          <a href="https://example.com/visa/marketing" target="_blank">Visa (USD)</a>
+          <a href="https://example.com/paypal/marketing" target="_blank">Paypal (International)</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>📞 +237 690826804 | +237 681856939</p>
+    <p>📧 Email : priscaviviane60@gmail.com</p>
+    <p>💬 <a href="https://chat.whatsapp.com/KPrfGDMZbIyBIjh2tY1g3J?mode=ac_t" target="_blank">Groupe WhatsApp</a> | 
+       <a href="https://t.me/DigitalMarketingAgencyFR" target="_blank">Groupe Telegram</a></p>
+    <p>&copy; 2025 Digital Marketing & Accounting Agency. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Fonction pour ouvrir/fermer dropdown
+    function toggleDropdown(button) {
+      const dropdown = button.parentElement;
+      dropdown.classList.toggle('show');
+
+      // Ferme les autres dropdowns ouverts
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) {
+          d.classList.remove('show');
+        }
+      });
+    }
+
+    // Fermer dropdown si
